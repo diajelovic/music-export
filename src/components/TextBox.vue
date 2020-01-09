@@ -1,25 +1,29 @@
 <template>
-    <div class="mdc-text-field">
-        <input :type="type" class="mdc-text-field__input" :id="name" :name="name"/>
-        <label class="mdc-floating-label" :for="name">Username</label>
-        <div class="mdc-line-ripple"></div>
-    </div>
+  <div class="mdc-text-field">
+    <input
+      ref="textbox"
+      :type="type"
+      class="mdc-text-field__input"
+      :id="name"
+      :name="name"
+      :autocomplete="name"
+    />
+    <label class="mdc-floating-label" :for="name">{{ label }}</label>
+    <div class="mdc-line-ripple"></div>
+  </div>
 </template>
 
 <script>
-  import {MDCTextField} from '@material/textfield';
+import { MDCTextField } from '@material/textfield';
 
-  export default {
-    props: [
-      'type',
-      'name'
-    ],
-    mounted () {
-      new MDCTextField(el);
-    }
-  }
+export default {
+  props: ['type', 'name', 'label'],
+  mounted() {
+    new MDCTextField(this.$el);
+  },
+};
 </script>
 
-<style module>
-    @import "~@material/textfield/mdc-text-field.scss";
+<style>
+@import '~@material/textfield/mdc-text-field.scss';
 </style>

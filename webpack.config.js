@@ -35,6 +35,18 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+              esModule: false,
+            },
+          },
+        ],
+      },
+      {
         test: /.(scss|css)$/,
 
         use: [
@@ -46,9 +58,9 @@ module.exports = {
 
             options: {
               sourceMap: true,
-              modules: {
-                localIdentName: '[local]_[hash:base64:5]',
-              },
+              // modules: {
+              //   localIdentName: '[local]_[hash:base64:5]',
+              // },
             },
           },
           {
@@ -67,9 +79,9 @@ module.exports = {
   },
 
   resolve: {
-    // alias: {
-    //   '@material': path.resolve(__dirname, 'node_modules/@material/'),
-    // },
+    alias: {
+      'components': path.resolve(__dirname, 'src/components'),
+    },
     extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
   },
 
@@ -94,6 +106,6 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 4545,
   },
 };
