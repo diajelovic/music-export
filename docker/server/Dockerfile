@@ -8,8 +8,8 @@ RUN yarn
 
 COPY . .
 
-RUN yarn build
+RUN yarn build:server
 
-EXPOSE 5000
+EXPOSE 3000
 
-ENTRYPOINT [ "yarn", "serve", "dist/client" ]
+ENTRYPOINT [ "yarn", "node", "dist/server/main.js" ]

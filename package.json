@@ -10,8 +10,11 @@
     "start:server:debug": "nest start --debug --watch",
     "build:client": "rimraf dist/client && webpack --config ./src/weback/webpack.client.config.js",
     "build:server": "rimraf dist/server && nest build",
-    "docker:build-image": "docker build -t music-export -f ./docker/Dockerfile .",
-    "docker:run": "docker run -d --rm -p 80:5000 music-export"
+    "docker:client:build-image": "docker build -t music-export-client -f ./docker/client/Dockerfile .",
+    "docker:server:build-image": "docker build -t music-export-server -f ./docker/server/Dockerfile .",
+    "docker:client:run:": "docker run -d --rm -p 80:5000 --name=music-export-client music-export-client",
+    "docker:server:run:": "docker run -d --rm -p 3000:3000 --name=music-export-server music-export-server",
+    "docker:compose": "docker-compose up -f ./docker/docker-compose.yml"
   },
   "dependencies": {
     "@material/textfield": "1.0.1",
