@@ -12,4 +12,4 @@ RUN yarn build
 
 EXPOSE 5000
 
-ENTRYPOINT [ "yarn", "serve", "dist" ]
+ENTRYPOINT [ "yarn", "serve", "dist/client" ]

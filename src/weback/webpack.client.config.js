@@ -6,10 +6,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const basedir = (url) => path.resolve(__dirname, '../../', url);
+
 module.exports = {
-  entry: path.resolve(__dirname, 'src/client/index.js'),
+  entry: basedir('src/client/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist/client'),
+    path: basedir('dist/client'),
     filename: 'bundle.js',
   },
   mode: 'development',
@@ -19,7 +21,7 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: 'main.[chunkhash].css' }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/assets/index.html'),
+      template: basedir('src/client/assets/index.html'),
     }),
   ],
 
@@ -69,7 +71,7 @@ module.exports = {
             options: {
               sourceMap: true,
               sassOptions: {
-                includePaths: [path.resolve(__dirname, 'node_modules')],
+                includePaths: [basedir('node_modules')],
               },
             },
           },
@@ -80,7 +82,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      'components': path.resolve(__dirname, 'src/components'),
+      'components': basedir('src/client/components'),
     },
     extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
   },
@@ -104,7 +106,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.join(__dirname, 'dist/client'),
+    contentBase: basedir('dist/client'),
     compress: true,
     port: 4545,
   },
