@@ -14,7 +14,7 @@
     "docker:server:build-image": "docker build -t music-export-server -f ./docker/server/Dockerfile .",
     "docker:client:run:": "docker run -d --rm -p 80:5000 --name=music-export-client music-export-client",
     "docker:server:run:": "docker run -d --rm -p 3000:3000 --name=music-export-server music-export-server",
-    "docker:compose": "docker-compose up -f ./docker/docker-compose.yml"
+    "docker:compose": "docker-compose up"
   },
   "dependencies": {
     "@material/textfield": "1.0.1",
