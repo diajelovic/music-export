@@ -955,123 +955,6 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@material/animation@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-1.0.0.tgz#dfd8575c8b031203917dc838ac0e3c0fe0f6709b"
-  integrity sha512-Ed5/vggn6ZhSJ87yn3ZS1d826VJNFz73jHF2bSsgRtHDoB8KCuOwQMfdgAgDa4lKDF6CDIPCKBZPKrs2ubehdw==
-  dependencies:
-    tslib "^1.9.3"
-
-"@material/base@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@material/base/-/base-1.0.0.tgz#e4ef0b22c54aa887af94f5988fb1c0cb3245beba"
-  integrity sha512-5dxFp46x5FA+Epg6YHLzN+5zRt9S2wR84UdvVAEJ1egea94m9UHUg7y9tAnNSN16aexRSywmzyLwPr+i8PGEYA==
-  dependencies:
-    tslib "^1.9.3"
-
-"@material/dom@^1.0.1", "@material/dom@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.1.0.tgz#3bd3d1a3415b4181118fecb182d93beda56a6f8c"
-  integrity sha512-+HWW38ZaM2UBPu4+7QCusLDSf4tFT31rsEXHkTkxYSg/QpDivfPx6YDz4OmYtafmhPR1d1YjqB3MYysUHdodyw==
-  dependencies:
-    tslib "^1.9.3"
-
-"@material/feature-targeting@^0.44.1":
-  version "0.44.1"
-  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.1.tgz#afafc80294e5efab94bee31a187273d43d34979a"
-  integrity sha512-90cc7njn4aHbH9UxY8qgZth1W5JgOgcEdWdubH1t7sFkwqFxS5g3zgxSBt46TygFBVIXNZNq35Xmg80wgqO7Pg==
-
-"@material/floating-label@^1.0.0", "@material/floating-label@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/floating-label/-/floating-label-1.1.0.tgz#505b9f8c7628d0498a18b165c387d4c34840ca60"
-  integrity sha512-7q7V+9o9XesgMnK11up9z+BcRFwtLIAIqVTCL3liKRARNHuzw9FGrGMKhTJUKvLZ3z0bM1+FmmVlA3q9FJWehQ==
-  dependencies:
-    "@material/animation" "^1.0.0"
-    "@material/base" "^1.0.0"
-    "@material/rtl" "^0.42.0"
-    "@material/theme" "^1.1.0"
-    "@material/typography" "^1.0.0"
-    tslib "^1.9.3"
-
-"@material/line-ripple@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/line-ripple/-/line-ripple-1.1.0.tgz#0fef69c14ddf42877f10eed05c1a2489808f1cf4"
-  integrity sha512-XqCxDNfgkh9zq0IVlTEFVjmQV8hx8m4vxLFM5qwHDDqcKPlX/Lfc8M43fmm9uE1CaJBC6whMGPvOt/dIla+RUg==
-  dependencies:
-    "@material/animation" "^1.0.0"
-    "@material/base" "^1.0.0"
-    "@material/theme" "^1.1.0"
-    tslib "^1.9.3"
-
-"@material/notched-outline@^1.0.0":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@material/notched-outline/-/notched-outline-1.1.1.tgz#a79c8aa3c5662b676bb46741658f434afa38f0da"
-  integrity sha512-HekxMWgIEGlmmdiCATfEJPjAWz2jlyXnfGUiBOkAzI25/OyOgcCd3rLzcMT5DUqItbKoNk1M/9kOmzTSNSt/CA==
-  dependencies:
-    "@material/animation" "^1.0.0"
-    "@material/base" "^1.0.0"
-    "@material/floating-label" "^1.1.0"
-    "@material/rtl" "^0.42.0"
-    "@material/shape" "^1.1.1"
-    "@material/theme" "^1.1.0"
-    tslib "^1.9.3"
-
-"@material/ripple@^1.0.1":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-1.1.0.tgz#236016fb30c8366faf143297df2c38166d84ffbc"
-  integrity sha512-mkfDBZAmxjpRG7V9TrfOmLxt1g/wvGHCXtYPgvH7W8ozjf53edqxLOFENEdvHbie27y9nyixzXn0gzU0HnxSeA==
-  dependencies:
-    "@material/animation" "^1.0.0"
-    "@material/base" "^1.0.0"
-    "@material/dom" "^1.1.0"
-    "@material/feature-targeting" "^0.44.1"
-    "@material/theme" "^1.1.0"
-    tslib "^1.9.3"
-
-"@material/rtl@^0.42.0":
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.42.0.tgz#1836e78186c2d8b996f6fbf97adab203535335bc"
-  integrity sha512-VrnrKJzhmspsN8WXHuxxBZ69yM5IwhCUqWr1t1eNfw3ZEvEj7i1g3P31HGowKThIN1dc1Wh4LE14rCISWCtv5w==
-
-"@material/shape@^1.0.0", "@material/shape@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-1.1.1.tgz#7a5368694bc3555e69ea547950904b46fa1024bf"
-  integrity sha512-Jge/h1XBLjdLlam4QMSzVgM99e/N8+elQROPkltqVP7eyLc17BwM3aP5cLVfZDgrJgvsjUxbgAP1H1j8sqmUyg==
-  dependencies:
-    "@material/feature-targeting" "^0.44.1"
-
-"@material/textfield@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@material/textfield/-/textfield-1.0.1.tgz#9b602dbb6cff56f483215c56c9be80a9eaa2664d"
-  integrity sha512-1GNyQBc4u8wexSUwia2W/ALw7ok5bTc+kpTzx290TELELulhKooPubwYhbziZTm38YTXFUTVOVmXDom1fKfV2A==
-  dependencies:
-    "@material/animation" "^1.0.0"
-    "@material/base" "^1.0.0"
-    "@material/dom" "^1.0.1"
-    "@material/floating-label" "^1.0.0"
-    "@material/line-ripple" "^1.0.0"
-    "@material/notched-outline" "^1.0.0"
-    "@material/ripple" "^1.0.1"
-    "@material/rtl" "^0.42.0"
-    "@material/shape" "^1.0.0"
-    "@material/theme" "^1.0.0"
-    "@material/typography" "^1.0.0"
-    tslib "^1.9.3"
-
-"@material/theme@^1.0.0", "@material/theme@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-1.1.0.tgz#9c95dd804168c23c30589fcf09ecc5af5b3d1adc"
-  integrity sha512-YYUV9Rhbx4r/EMb/zoOYJUWjhXChNaLlH1rqt3vpNVyxRcxGqoVMGp5u1XALBCFiD9dACPKLIkKyRYa928nmPQ==
-  dependencies:
-    "@material/feature-targeting" "^0.44.1"
-
-"@material/typography@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-1.0.0.tgz#327ecfcac5ee3af8a3a102f3f125a761202f4189"
-  integrity sha512-Oeqbjci1cC7jTE8/n3dwnkqKe9ZeWiaE+rgMtRYtRFw1HvAw14SpGA5EEAS/Li2Hu2KZ50FYCe3HYqShfxtChA==
-  dependencies:
-    "@material/feature-targeting" "^0.44.1"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4436,6 +4319,11 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+format-thousands@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/format-thousands/-/format-thousands-1.1.1.tgz#7975bee30338d9006390da5831db0b41c323fbfa"
+  integrity sha1-eXW+4wM42QBjkNpYMdsLQcMj+/o=
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -9965,6 +9853,15 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
+vue-github-buttons@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vue-github-buttons/-/vue-github-buttons-3.1.0.tgz#eaea2ba0b7e0df5a7fd1c61ba37dabf7553dd79a"
+  integrity sha512-x0b9bdhP5xZOD5kQ9+nnCzvKqVyHb4moqN2l06mjYB/k2WRdW5jiAWlneUgoPFwPvcqM40vrTDXVvBrS0MMlEQ==
+  dependencies:
+    format-thousands "^1.1.1"
+    node-fetch "^2.3.0"
+    tslib "^1.9.3"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -9980,6 +9877,14 @@ vue-loader@^15.8.3:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-material@^1.0.0-beta-14:
+  version "1.0.0-beta-14"
+  resolved "https://registry.yarnpkg.com/vue-material/-/vue-material-1.0.0-beta-14.tgz#bb3fc46bec4ed045f990744383ac944a190ceed3"
+  integrity sha512-Y6ZUqKqbdUEYxOHJcqsaIIi3Vopn0+k/zw34V8lz03z8D/PMaz1T+jH7Dn3qZdrQNn7qsvDqBrafDcn0avho8A==
+  dependencies:
+    vue-github-buttons "^3.1.0"
+    vue-toc "0.0.1"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
@@ -10002,7 +9907,14 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.11:
+vue-toc@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vue-toc/-/vue-toc-0.0.1.tgz#6a4dfa9c144445679705cd7b991a1a73ac080cc0"
+  integrity sha512-RZfVgLzk/kpEmk05ptvU/+x3TVo4Ai4BBARvV4iCurR9bJsAqnnrqwjEBKnEG+s6NT0yQ6EY0JMGViyOUGysDw==
+  dependencies:
+    vue "^2.6.10"
+
+vue@^2.6.10, vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==

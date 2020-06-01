@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <Login />
+  <div class="md-layout md-alignment-center">
+    <div class="md-layout-item form">
+      <Login />
+    </div>
   </div>
 </template>
 
@@ -12,6 +14,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '~@material/textfield/mdc-text-field.scss';
+<style scoped>
+  .form {
+    max-width: 500px;
+  }
 </style>

@@ -1,27 +1,35 @@
 <template>
   <form>
-    <img class="logo" src="./images/deezer-logo.png" alt="" />
-    <TextBox name="deezer_username" type="text" label="Username" :onChange="changeNameHandler" />
-    <TextBox name="deezer_password" type="password" label="Password" :onChange="changePassHandler"/>
+    <div class="md-layout md-alignment-center">
+      <div class="md-layout-item logo">
+        <img src="./images/deezer-logo.png" alt="" />
+      </div>
+    </div>
+    <div class="md-layout md-gutter">
+      <div class="md-layout-item md-small-size-100">
+        <md-field>
+          <label>Login</label>
+          <md-input v-model="name" />
+        </md-field>
+      </div>
+      <div class="md-layout-item md-small-size-100">
+        <md-field>
+          <label>Password</label>
+          <md-input v-model="password"/>
+        </md-field>
+      </div>
+    </div>
     <div>Result: {{ result }}</div>
   </form>
 </template>
 
 <script>
-import TextBox from 'components/TextBox';
 
 export default {
-  components: { TextBox },
   data() {
     return {
       name: '',
       password: '',
-      changeNameHandler: (value) => {
-        this.name = value;
-      },
-      changePassHandler: (value) => {
-        this.password = value;
-      }
     }
   },
   computed: {
@@ -33,10 +41,11 @@ export default {
 </script>
 
 <style scoped>
-@import '~@material/textfield/mdc-text-field.scss';
-
 .logo {
-  width: 100px;
+  max-width: 100px;
+}
+
+.logo img {
   height: 50px;
   display: block;
 }

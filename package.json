@@ -17,7 +17,6 @@
     "docker:compose": "docker-compose up"
   },
   "dependencies": {
-    "@material/textfield": "1.0.1",
     "@nestjs/common": "^6.10.14",
     "@nestjs/core": "^6.10.14",
     "@nestjs/platform-express": "^6.10.14",
@@ -25,7 +24,8 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
     "serve": "^11.3.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-material": "^1.0.0-beta-14"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
