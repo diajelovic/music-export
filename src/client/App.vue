@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Login from './pages/deezer-login';
+import Login from 'pages/deezer-login';
 
 export default {
   components: { Login },
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style scoped>
-  .form {
-    max-width: 500px;
-  }
+.form {
+  max-width: 300px;
+}
 </style>

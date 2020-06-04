@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const basedir = (url) => path.resolve(__dirname, '../../', url);
+const basedir = url => path.resolve(__dirname, '../../', url);
 
 module.exports = {
   entry: basedir('src/client/index.js'),
@@ -14,6 +14,7 @@ module.exports = {
     path: basedir('dist/client'),
     filename: 'bundle.js',
   },
+
   mode: 'development',
 
   plugins: [
@@ -31,11 +32,12 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
       },
-      {
-        test: /.(js|jsx)$/,
-        include: [],
-        loader: 'babel-loader',
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   include: [],
+      //   loader: 'babel-loader',
+      // },
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -82,7 +84,9 @@ module.exports = {
 
   resolve: {
     alias: {
-      'components': basedir('src/client/components'),
+      assets: basedir('src/client/assets'),
+      stores: basedir('src/client/stores'),
+      pages: basedir('src/client/pages'),
     },
     extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
   },
@@ -109,5 +113,6 @@ module.exports = {
     contentBase: basedir('dist/client'),
     compress: true,
     port: 4545,
+    stats: 'errors-only',
   },
 };
