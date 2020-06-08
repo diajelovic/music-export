@@ -4,11 +4,11 @@
   "author": "Andrey Borha",
   "license": "MIT",
   "scripts": {
-    "start:client": "webpack-dev-server --config ./src/weback/webpack.client.config.js",
+    "start:client": "webpack-dev-server --config src/webpack/webpack.client.config.js",
     "start:server": "nest start",
     "start:server:dev": "nest start --watch",
     "start:server:debug": "nest start --debug --watch",
-    "build:client": "rimraf dist/client && webpack --config ./src/weback/webpack.client.config.js",
+    "build:client": "rimraf dist/client && webpack --config src/webpack/webpack.client.config.js",
     "build:server": "rimraf dist/server && nest build",
     "docker:client:build-image": "docker build -t music-export-client -f ./docker/client/Dockerfile .",
     "docker:server:build-image": "docker build -t music-export-server -f ./docker/server/Dockerfile .",
@@ -26,6 +26,7 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
     "serve": "^11.3.0",
+    "typescript": "^3.9.5",
     "vue": "^2.6.11",
     "vue-material": "^1.0.0-beta-14"
   },
@@ -50,15 +51,14 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",
     "terser-webpack-plugin": "^2.3.1",
     "vue-loader": "^15.8.3",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "workbox-webpack-plugin": "^4.3.1"
+    "webpack-cli": "^3.3.10"
   },
   "description": "Music export app"
 }

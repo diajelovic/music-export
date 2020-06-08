@@ -3,7 +3,7 @@ import { Controller, Post, Get, Options, Header, Body, Query } from '@nestjs/com
 @Controller('auth')
 export class AuthController {
   @Options()
-  @Header('Access-Control-Allow-Origin', 'http://localhost:4545')
+  @Header('Access-Control-Allow-Origin', '*')
   @Header('Access-Control-Allow-Headers', 'Content-Type')
   optionsLogin() {
 
@@ -18,6 +18,7 @@ export class AuthController {
   @Get()
   @Header('Access-Control-Allow-Origin', 'http://localhost:4545')
   getLogin(@Query('login') login: string, @Query('password') password: string,): number | string {
+    console.log(login, password);
     return this.login({login, password});
   }
 

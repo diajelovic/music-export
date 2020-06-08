@@ -1,11 +1,15 @@
 version: "3.0"
 services:
-  web:
-    image: music-export-client
-    ports:
-    - "80:5000"
-
   server:
     image: music-export-server
     ports:
-    - "3000:3000"
+      - "3000:3000"
+
+  web:
+    image: music-export-client
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+
+

@@ -8,7 +8,7 @@ class AuthStore {
     if (!params.login || !params.password) {
       this.result = 'Enter Pass And Login';
     } else {
-      const response = await fetch('http://localhost:3000/auth', {
+      const response = await fetch('http://localhost/test', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
