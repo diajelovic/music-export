@@ -4,6 +4,12 @@ services:
     image: music-export-server
     ports:
       - "3000:3000"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: ec2-tutorial
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: server
 
   web:
     image: music-export-client
@@ -11,5 +17,9 @@ services:
       - "80:80"
     depends_on:
       - server
-
-
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: ec2-tutorial
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: web
