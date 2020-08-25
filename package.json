@@ -21,15 +21,18 @@
     "@nestjs/core": "^7.2.0",
     "@nestjs/platform-express": "^7.2.0",
     "aws-sdk": "^2.700.0",
+    "js-cookie": "^2.2.1",
     "mobx": "^5.15.4",
     "mobx-vue": "^2.0.10",
+    "query-string": "^6.13.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
     "serve": "^11.3.0",
     "typescript": "^3.9.5",
     "vue": "^2.6.11",
-    "vue-material": "^1.0.0-beta-14"
+    "vue-material": "^1.0.0-beta-14",
+    "vue-router": "^3.4.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",

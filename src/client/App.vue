@@ -1,18 +1,10 @@
 <template>
   <div class="md-layout md-alignment-center">
     <div class="md-layout-item form">
-      <Login />
+      <router-view></router-view>
     </div>
   </div>
 </template>
-
-<script>
-import Login from 'pages/deezer-login';
-
-export default {
-  components: { Login },
-};
-</script>
 
 <style scoped>
 .form {

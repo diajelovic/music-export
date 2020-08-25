@@ -1,5 +1,7 @@
 import { observable, action } from 'mobx';
 
+console.debug('---API', API);
+
 class AuthStore {
   @observable isLoggedIn = false;
   @observable result = '';
@@ -8,7 +10,7 @@ class AuthStore {
     if (!params.login || !params.password) {
       this.result = 'Enter Pass And Login';
     } else {
-      const response = await fetch('http://localhost/test', {
+      const response = await fetch(API + 'auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

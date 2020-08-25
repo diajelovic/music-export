@@ -2,50 +2,34 @@
   <form>
     <div class="md-layout md-alignment-center">
       <div class="md-layout-item logo">
-        <img src="./images/deezer-logo.png" alt="" />
+        Not Authorized
       </div>
     </div>
-    <div class="md-layout">
-      <div class="md-layout-item md-small-size-100">
-        <md-field>
-          <label>Login</label>
-          <md-input v-model="name" />
-        </md-field>
-      </div>
-    </div>
-    <div class="md-layout">
-      <div class="md-layout-item md-small-size-100">
-        <md-field>
-          <label>Password</label>
-          <md-input v-model="password" />
-        </md-field>
-      </div>
-    </div>
-    <div class="md-layout md-alignment-top-right">
-      <md-button @click="login" class="md-raised md-primary">Primary</md-button>
-    </div>
-    <div v-if="auth.result">Result: {{ auth.result }}</div>
   </form>
 </template>
 
 <script>
-import { observer } from 'mobx-vue';
-import { authStore } from 'stores/auth.store';
+import qs from 'query-string';
 
-export default observer({
+export default {
   data() {
+    const query = window.location.hash.substr(1);
+
     return {
-      auth: authStore,
-      name: '',
-      password: '',
+      token: qs.parse(query).access_token,
+      expires: 3600,
     };
   },
-  methods: {
-    login() {
-      this.auth.login({ login: this.name, password: this.password });
-    },
+  mounted() {
+    if (this.token) {
+      window.opener.postMessage(
+        { type: 'deezerLogin', token: this.token, expires: this.expires },
+        window.location.origin
+      );
+      window.close();
+    }
   },
-});
+};
 </script>
 
 <style scoped>
