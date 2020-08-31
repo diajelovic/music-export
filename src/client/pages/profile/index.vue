@@ -1,6 +1,5 @@
 <template>
   <div>
-    PROFILE
     <ProfileItem v-for="service in state.services" :key="service.name" :service="service" />
   </div>
 </template>

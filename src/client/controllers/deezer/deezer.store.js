@@ -1,3 +1,5 @@
+/* global API */
+
 import Cookies from 'js-cookie';
 import qs from 'query-string';
 import { observable, action, computed, set } from 'mobx';
@@ -11,6 +13,7 @@ const getApiUrl = (method, query) =>
 class DeezerStore {
   @observable userData = {};
   @observable songs = [];
+  @observable totalSongsCount = 0;
 
   fetchUserData() {
     const access_token = Cookies.get('deezerAuthToken');
@@ -26,18 +29,24 @@ class DeezerStore {
     }
   }
 
-  fetchUserSongs() {
+  fetchUserSongs(startIndex = 0) {
     const access_token = Cookies.get('deezerAuthToken');
     const url = `/user/me/tracks`;
 
     if (access_token && url) {
-      fetch(getApiUrl(url, { access_token, all: true }))
+      fetch(getApiUrl(url, { index: startIndex, access_token, all: true }))
         .then(res => {
           return res.json();
         })
         .then(data => {
           this.setUserSongs(data);
         });
+    }
+  }
+
+  fetchNextPage() {
+    if (this.totalSongsCount > this.songs.length) {
+      this.fetchUserSongs(this.songs.length);
     }
   }
 
@@ -58,7 +67,8 @@ class DeezerStore {
 
   @action.bound
   setUserSongs(data) {
-    this.songs.replace(data.data.map(s => ({ name: s.title })));
+    this.totalSongsCount = data.total;
+    this.songs.replace([...this.songs.slice(), ...data.data.map(s => ({ name: s.title }))]);
   }
 }
 

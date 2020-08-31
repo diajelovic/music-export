@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueMaterial from 'vue-material';
 import VueRouter from 'vue-router';
+import infiniteScroll from 'vue-infinite-scroll';
 import 'vue-material/dist/vue-material.min.css';
 import 'vue-material/dist/theme/black-green-light.css';
 
@@ -11,6 +12,7 @@ import DeezerLogin from './pages/deezer-login';
 
 Vue.use(VueMaterial);
 Vue.use(VueRouter);
+Vue.use(infiniteScroll);
 
 const routes = [
   { path: '/', component: Auth },

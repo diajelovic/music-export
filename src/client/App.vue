@@ -1,13 +1,13 @@
 <template>
   <div class="md-layout md-alignment-center">
-    <div class="md-layout-item form">
+    <div class="md-layout-item page">
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <style scoped>
-.form {
-  max-width: 300px;
+.page {
+  max-width: 1000px;
 }
 </style>

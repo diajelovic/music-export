@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div>name: {{ service.name }}</div>
-    <div>user: {{ service.store.userName }}</div>
-    <button v-if="service.store.userName">show Songs</button>
+    <div class="profile-wrapper">
+      <h2>{{ service.name }}</h2>
+      <div class="md-subheading">songs: {{ service.store.totalSongsCount }}</div>
+    </div>
+    <!--    <button v-if="service.store.userName">show Songs</button>-->
     <Playlist v-if="service.store.userName" :service="service" />
   </div>
 </template>
@@ -21,3 +23,9 @@ export default observer({
   },
 });
 </script>
+
+<style>
+.profile-wrapper {
+  margin: 20px 0;
+}
+</style>

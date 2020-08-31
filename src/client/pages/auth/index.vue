@@ -1,14 +1,16 @@
 <template>
   <div>
-    <button
-      v-for="service in state.services"
-      :key="service.name"
-      class="button"
-      :disabled="service.auth.loginned"
-      @click="service.auth.openLoginPopup"
-    >
-      <img :src="service.logoPath" :alt="service.name" />
-    </button>
+    <div class="md-layout md-alignment-center">
+      <button
+        v-for="service in state.services"
+        :key="service.name"
+        class="button"
+        :disabled="service.auth.loginned"
+        @click="service.auth.openLoginPopup"
+      >
+        <img :src="service.logoPath" :alt="service.name" />
+      </button>
+    </div>
     <div>logginned in: {{ state.loginnedServices }}</div>
   </div>
 </template>
